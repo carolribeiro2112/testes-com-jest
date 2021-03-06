@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Alert = () => {
+export interface AlertProps{
+  alert: string;
+}
+
+const Alert = (props: AlertProps) => {
   return(
-    <strong>Você deve aceitar os termos</strong>
+    <strong>{props.alert}</strong>
   )
 }
 

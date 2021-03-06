@@ -1,11 +1,15 @@
 import React from 'react';
 
-const Lista = () => {
+export interface ListaProps {
+  profession: string;
+}
+
+const Lista = (props: ListaProps) => {
   return(
     <>
       <p>Profissão</p>
       <ul data-testid="list">
-        <li data-testid="item">Dev front-end</li>
+        <li data-testid="item">{props.profession}</li>
       </ul>
     </>
   )
